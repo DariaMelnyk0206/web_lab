@@ -1,0 +1,27 @@
+<div class="course-card" itemscope itemtype="https://schema.org/Course" style="background-color: #FFFFFF;">
+    <div class="course-topic" style="background-color: #E0F2FE;">
+        <img src="/label.png" alt="Topic label icon">
+        <span itemprop="educationalCredentialAwarded"><%= course.topic %></span>
+    </div>
+  
+    <div class="course-content">
+        <h2 itemprop="name">
+            <a href="/courses/<%= course.id %>" itemprop="url"><%= course.title %></a>
+        </h2>
+        <p itemprop="description"><%= course.description %></p>
+    </div>
+  
+    <div class="course-footer" itemprop="hasCourseInstance" itemscope itemtype="https://schema.org/CourseInstance">
+        <% if (course.price) { %>
+            <p itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span itemprop="price"><%= course.price %></span>
+            </p>
+        <% } %>
+        <div class="course-meta">
+            <img src="/level.png" alt="Level icon">
+            <span itemprop="educationalLevel"><%= course.level %></span>
+            <strong itemprop="timeRequired"><%= course.duration %></strong>
+        </div>
+    </div>
+</div>
+  

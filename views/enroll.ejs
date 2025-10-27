@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll — <%= course.title %></title>
+</head>
+<body style="background-color: #F6F7F8;">
+    <%- include('partials/header') %>
+
+    <main class="enroll-container">
+        <div class="col">
+            <section class="course-info">
+                <h1><%= course.title %></h1>
+                <p><%= course.description %></p>
+                <div class="col">
+                    <img src="/time.png" alt="Duration">
+                    <span><%= course.duration %></span>
+                </div>
+        
+                <div class="col">
+                    <span>&lt;&gt; <%= course.lessons %> lessons</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="col">
+            <% if (course.price !== "Free course") { %>
+                <h3>Choose Your Plan</h3>
+                <section class="enroll-form" style="background-color: #FFFFFF;">
+                    <form action="#">
+                        <label>
+                            <input type="radio" name="plan" value="trial" required>
+                            7-Day Free Trial
+                        </label>
+                        <br>
+                
+                        <label>
+                            <input type="radio" name="plan" value="full">
+                            Full Course Access — $15
+                        </label>
+                        <br><br>
+                    </form>
+                </section>
+                <button class="btn solid purple">Enroll & Start</button>
+            <% } %>
+        </div>        
+    </main>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
