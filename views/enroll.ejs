@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css">
     <title>Enroll — <%= course.title %></title>
 </head>
-<body style="background-color: #F6F7F8;">
+<body>
     <%- include('partials/header') %>
 
     <main class="enroll-container">
@@ -12,21 +14,23 @@
             <section class="course-info">
                 <h1><%= course.title %></h1>
                 <p><%= course.description %></p>
-                <div class="col">
-                    <img src="/time.png" alt="Duration">
-                    <span><%= course.duration %></span>
-                </div>
-        
-                <div class="col">
-                    <span>&lt;&gt; <%= course.lessons %> lessons</span>
-                </div>
+                <div class="col time-lessons-row">
+                    <div class="time">
+                        <img src="/time.png" alt="Duration">
+                        <span><%= course.duration %></span>
+                    </div>
+                    
+                    <div class="lessons">
+                        <span>&lt;&gt; <%= course.lessons %> lessons</span>
+                    </div>
+                </div>                
             </section>
         </div>
 
         <div class="col">
             <% if (course.price !== "Free course") { %>
                 <h3>Choose Your Plan</h3>
-                <section class="enroll-form" style="background-color: #FFFFFF;">
+                <section class="enroll-form">
                     <form action="#">
                         <label>
                             <input type="radio" name="plan" value="trial" required>

@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css">
     <title><%= course.title %> - LearnIT</title>
 </head>
-<body style="background-color: #F6F7F8;">
+<body>
     <%- include('partials/header') %>
 
     <main class="course-details">
         <section class="course-header">
             <h1><%= course.title %></h1>
-            <p class="course-description"><%= course.description %></p>
+            <p><%= course.description %></p>
         </section>
 
         <section class="course-info">
-            <p><%= course.topic %></p>
 
             <div class="course-tags">
+                <span class="tag""><%= course.topic %></span>
+
                 <% if (course.technology && course.technology.length > 0) { %>
                     <% course.technology.forEach(tech => { %>
-                        <span class="tag" style="background-color: #E0F2FE;"><%= tech %></span>
+                        <span class="tag""><%= tech %></span>
                     <% }) %>
                 <% } %>
             
                 <% if (course.exercises) { %>
-                    <span class="tag" style="background-color: #E0F2FE;"><%= course.exercises %> Exercises</span>
+                    <span class="tag""><%= course.exercises %> Exercises</span>
                 <% } %>
             
                 <% if (course.videos) { %>
-                    <span class="tag" style="background-color: #E0F2FE;"><%= course.videos %> Videos</span>
+                    <span class="tag""><%= course.videos %> Videos</span>
                 <% } %>
             </div>
         </section>          
@@ -37,14 +39,16 @@
         <section class="enroll-redirect">
             <button
                 onclick="window.location.href='/enroll/<%= course.id %>'"
-                class="btn solid purple">
+                class="btn start">
                 Start
             </button>
         </section> 
 
-        <%- include('partials/what_learn', { whatLearn: course.whatLearn }) %>
+        <section class="what-learn">
+            <%- include('partials/what_learn', { whatLearn: course.whatLearn }) %>
+        </section> 
 
-        <section class="course-stats" style="background-color: #FFFFFF;">
+        <section class="course-stats">
             <div class="col">
                 <img src="/time.png" alt="Duration">
                 <span><%= course.duration %></span>

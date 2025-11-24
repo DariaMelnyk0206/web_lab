@@ -1,0 +1,19 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #d3d3d3;
+    @include mixins.nunitoFont(16px, 400, vars.$black, normal); // ✅ префікс
+
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+
+    &:focus {
+        outline: none;
+        border-color: vars.$blue; // ✅ префікс
+        box-shadow: 0 0 0 2px rgba(vars.$blue, 0.15); // ✅ префікс і нормальний формат
+    }
+}
+

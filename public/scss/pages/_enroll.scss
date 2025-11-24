@@ -1,0 +1,152 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.enroll-container {
+  max-width: 100vw;
+  margin: 60px auto 80px;
+  padding: 0 50px;
+  display: flex;
+  gap: 40px;
+
+  > .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &:first-child {
+      background: none;  // Прибираємо підложку для першого блоку
+      border: none;
+      justify-content: center;  // Центруємо по вертикалі
+    }
+  }
+
+  .course-info {
+    padding: 24px;
+    max-width: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;  // Розташовує елементи на кінцях
+
+    h1 {
+        @include mixins.workSansFont(36px, 700, vars.$black, normal);
+        line-height: 1;
+        margin: 0px 0px 5px;
+        padding: 0;
+    }
+
+    p {
+        @include mixins.nunitoFont(22px, 300, vars.$black, normal);
+        line-height: 1;
+        margin: 0px 0px 50px;
+        padding: 0;
+    }
+
+    /* Оновлення для вирівнювання тексту по горизонталі */
+    .time-lessons-row {
+        display: flex;
+        justify-content: space-between;  // Розміщає елементи на дві сторони
+        align-items: center;
+        width: 100%;  /* Вся ширина доступна для елементів */
+    }
+
+    .time {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        @include mixins.nunitoFont(13px, 700, #000, normal);
+    }
+
+    .lessons {
+        display: flex;
+        align-items: center;
+        @include mixins.nunitoFont(13px, 500, #2D3A4A, normal);
+    }
+}
+
+.enroll-form {
+    position: relative;
+    padding: 24px;
+    background: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;  /* Центруємо по вертикалі */
+        left: 10%;  /* Відступ від лівого краю */
+        width: 80%;  /* Відстань між лівим і правим краєм */
+        height: 1px;  /* Товщина лінії */
+        background-color: #E1E1E1;
+        transform: translateY(-50%);  /* Центруємо лінію по вертикалі */
+    }
+
+    /* Стилі для input (radio) */
+    input[type="radio"] {
+        margin-right: 12px;  /* Відступ між кнопкою і текстом */
+        margin-bottom: 30px;  /* Відступ між кнопкою і текстом */
+        accent-color: #4F46E5;  /* Колір для чекнутого стану */
+        width: 18px;  /* Задаємо розмір радіокнопки */
+        height: 18px;
+        cursor: pointer;
+    }
+
+    /* Стилі для label */
+    label {
+        display: flex;
+        align-items: center;
+        gap: 10px;  /* Відстань між радіокнопкою та текстом */
+        @include mixins.nunitoFont(16px, 500, #2D3A4A, normal);  /* Вибір шрифту */
+        cursor: pointer;  /* Змінюємо курсор на pointer при наведенні */
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #4F46E5;  /* Колір при наведенні */
+        }
+    }
+
+    /* Додатково для тексту радіокнопок */
+    .enroll-form label span {
+        font-size: 14px;
+        color: #505D6B;
+    }
+}
+
+  .btn.solid.purple {
+    @include mixins.workSansFont(18px, 600, vars.$white, normal);
+    background-color: #4F46E5;
+    color: vars.$white;
+    border-radius: 10px;
+    padding: 14px 22px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      background-color: #3B3ED1;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .enroll-container {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 40px auto 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .enroll-container {
+    padding: 0 15px;
+    margin: 20px auto 40px;
+  }
+}

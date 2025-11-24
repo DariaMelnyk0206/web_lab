@@ -1,0 +1,1235 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@600&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* ---- Typography ---- */
+/* ---- FLEX ---- */
+/* ---- GRID ---- */
+/* ---- CONTAINER ---- */
+/* ---- REM FUNCTION ---- */
+/* ---- COLOR MIX ---- */
+/* ---- RESPONSIVE ---- */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes soft-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.header-container {
+  max-width: 100vw;
+  padding: 0 50px;
+  height: 80px;
+  background-color: #4F46E5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .col {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header-container .learnit a {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-size: 36px;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-style: normal;
+  text-decoration: none;
+}
+.header-container nav.desktop a {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-style: normal;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.header-container nav.desktop a:hover {
+  opacity: 0.85;
+}
+.header-container button[aria-label=submit] {
+  width: 42px;
+  height: 42px;
+  border-radius: 50px 0 0 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-container button[aria-label=submit] img {
+  width: 35px;
+  height: 35px;
+}
+.header-container button[aria-label=submit]:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+.header-container .desktop {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.header-container button.mobile {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.header-container button.mobile img {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 768px) {
+  .header-container nav.desktop {
+    display: none;
+  }
+  .header-container button.mobile {
+    display: block;
+  }
+}
+
+.footer-container {
+  background-color: #E0F2FE;
+  padding: 60px 40px 30px;
+  border-top: 1px solid #c3d5e8;
+}
+.footer-container .footer-columns {
+  max-width: 100vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  position: relative;
+  /* вертикальна лінія тільки на desktop */
+}
+.footer-container .footer-columns::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: #c3d5e8;
+}
+.footer-container .footer-columns .col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .footer-columns .col h4 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  font-style: normal;
+  margin-bottom: 8px;
+}
+.footer-container .footer-columns .col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-container .footer-columns .col ul li {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.footer-container .footer-columns .col ul li:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+.footer-container .footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer-container .footer-bottom p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+  opacity: 0.6;
+}
+
+/* ---------- MOBILE (<900px) ---------- */
+@media (max-width: 900px) {
+  .footer-container {
+    padding: 40px 20px 20px;
+  }
+  .footer-container .footer-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+  }
+  .footer-container .footer-columns::after {
+    display: none;
+  }
+  .footer-container .footer-bottom {
+    max-width: 100vw;
+    margin-top: 20px;
+    display: flex;
+    text-align: flex-end;
+  }
+}
+.btn {
+  padding: 8px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.2s ease;
+}
+
+.login-btn {
+  padding: 8px 22px;
+  height: 42px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #FFFFFF;
+  font-style: normal;
+  transition: opacity 0.2s ease;
+}
+.login-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.signup-btn {
+  padding: 8px 22px;
+  height: 42px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  color: #4F46E5;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4F46E5;
+  font-style: normal;
+  transition: opacity 0.2s ease;
+}
+.signup-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.start-learning {
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-style: normal;
+  transition: background-color 0.25s ease, opacity 0.25s ease;
+}
+.start-learning:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.start {
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-style: normal;
+  transition: background-color 0.25s ease, opacity 0.25s ease;
+}
+.start:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 330px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #4F46E5;
+  cursor: pointer;
+}
+.course-card .course-topic {
+  background: #E8F1FF;
+  padding: 10px 16px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.course-card .course-topic img {
+  width: 18px;
+  height: 18px;
+}
+.course-card .course-topic span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2D3A4A;
+  font-style: normal;
+}
+.course-card .course-content {
+  padding: 14px 16px;
+}
+.course-card .course-content h2 a {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+  margin: 0 0 6px 0;
+  text-decoration: none;
+  color: #000000;
+}
+.course-card .course-content h2 a:hover {
+  text-decoration: underline;
+}
+.course-card .course-content p {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #505D6B;
+  font-style: normal;
+  line-height: 1.4;
+}
+.course-card {
+  /* Нижній блок завжди при низу картки */
+}
+.course-card .course-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+}
+.course-card .course-price {
+  padding: 0 16px 10px;
+}
+.course-card .course-price span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2D3A4A;
+  font-style: normal;
+}
+.course-card .course-divider {
+  height: 1px;
+  background: #E1E1E1;
+  margin: 0 16px;
+}
+.course-card .course-footer {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.course-card .course-footer .course-meta {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.course-card .course-footer .course-meta img {
+  width: 16px;
+}
+.course-card .course-footer .course-meta span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2D3A4A;
+  font-style: normal;
+}
+.course-card .course-footer .time {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  font-style: normal;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d3d3d3;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+.hero {
+  max-width: 100vw;
+  margin: 35px auto 25px;
+  padding: 0px 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 220px;
+}
+.hero > .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0 px 24px;
+}
+.hero .hero-text {
+  max-width: 735px;
+}
+.hero .hero-text h1 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 52px;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+  line-height: 1;
+  margin: 0px 0px 5px;
+  padding: 0;
+}
+.hero .hero-text p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 30px;
+  font-weight: 300;
+  color: #000000;
+  font-style: normal;
+  line-height: 1;
+  margin: 0px 0px 50px;
+  padding: 0;
+}
+.hero nav.desktop a {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hero nav.desktop a img {
+  width: 270px;
+  height: 270px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  .hero .hero-text {
+    max-width: 100%;
+  }
+  .hero .hero-text h1 {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    font-style: normal;
+  }
+  .hero .hero-text p {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    font-weight: 300;
+    color: #000000;
+    font-style: normal;
+    margin-bottom: 30px;
+  }
+  .hero nav.desktop a img {
+    width: 140px;
+    height: auto;
+  }
+  nav.desktop {
+    display: none;
+  }
+}
+.features-section {
+  max-width: 1440px;
+  margin: 0px 50px 35px 50px;
+  padding: 24px 50px;
+  background-color: #E0F2FE;
+  border: 1.5px solid #9298A3;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.features-section .col {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.features-section .col img {
+  width: 64px;
+  height: auto;
+  margin: 0 auto;
+}
+.features-section .col h3 {
+  max-width: 160px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 22px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+}
+.features-section {
+  /* вертикальні лінії між колонками */
+}
+.features-section .col:not(:last-child) {
+  position: relative;
+}
+.features-section .col:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 1.5px;
+  height: 80%;
+  background-color: #BFCBD8;
+}
+
+/* ---------- MOBILE (<900px) ---------- */
+@media (max-width: 900px) {
+  .features-section {
+    flex-direction: column;
+    padding: 30px;
+    background: none;
+    border: none;
+  }
+  .features-section .col {
+    padding: 0px 0px;
+    text-align: center;
+  }
+  .features-section .col img {
+    width: 40px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .features-section .col h3 {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 18px;
+    font-weight: 400;
+    color: #000000;
+    font-style: normal;
+  }
+  .features-section .col:not(:last-child)::after {
+    content: "";
+    position: relative;
+    display: block;
+    width: 150%;
+    height: 2px;
+    margin: 0px 0;
+    transform: translateX(-15%);
+  }
+  .features-section {
+    /* прибираємо вертикальні лінії */
+  }
+  .features-section .col::after {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    height: 1px;
+  }
+}
+.courses-page main {
+  max-width: 100vw;
+  margin: 40px 50px 80px;
+  padding: 0 20px;
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Кнопка фільтрів */
+.filters-btn {
+  display: none;
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid #d3d3d3;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  font-style: normal;
+}
+
+/* Блок фільтрів */
+.filters-col {
+  flex: 0 0 280px;
+  background: #FFFFFF;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #d3d3d3;
+  overflow-y: auto;
+  max-height: 600px;
+  box-sizing: border-box;
+}
+.filters-col form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.filters-col form ul, .filters-col form ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.filters-col .filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filters-col .filter-group:not(:last-child) {
+  border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+.filters-col .filter-group label {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2D3A4A;
+  font-style: normal;
+  cursor: pointer;
+}
+
+/* Картки курсів */
+.courses-col {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: 16px;
+  column-gap: 16px;
+  box-sizing: border-box;
+}
+.courses-col .course-card {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  background: #FFFFFF;
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.courses-col .course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #4F46E5;
+  cursor: pointer;
+}
+.courses-col .course-card .course-topic {
+  background: #E8F1FF;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.courses-col .course-card .course-topic img {
+  width: 18px;
+  height: 18px;
+}
+.courses-col .course-card .course-topic span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2D3A4A;
+  font-style: normal;
+}
+.courses-col .course-card .course-content {
+  padding: 12px 16px;
+}
+.courses-col .course-card .course-content h2 a {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+  margin-bottom: 4px;
+  text-decoration: none;
+  color: #000000;
+}
+.courses-col .course-card .course-content p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 12px;
+  font-weight: 400;
+  color: #505D6B;
+  font-style: normal;
+  line-height: 1.3;
+  margin: 0;
+}
+.courses-col .course-card .course-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.courses-col .course-card .course-bottom .course-price {
+  font-size: 12px;
+}
+.courses-col .course-card .course-bottom .course-divider {
+  height: 1px;
+  background: #E1E1E1;
+  margin: 0;
+}
+.courses-col .course-card .course-bottom .course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.courses-col .course-card .course-bottom .course-footer .time {
+  order: 0;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  font-style: normal;
+}
+.courses-col .course-card .course-bottom .course-footer .course-meta {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.courses-col .course-card .course-bottom .course-footer .course-meta img {
+  width: 16px;
+}
+.courses-col .course-card .course-bottom .course-footer .course-meta span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2D3A4A;
+  font-style: normal;
+}
+
+/* Мобільна версія */
+@media (max-width: 1000px) {
+  .courses-page main {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .filters-btn {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .filters-col {
+    display: none;
+  }
+  .courses-col {
+    grid-template-columns: 1fr;
+  }
+}
+/* Десктоп: кнопка завжди прихована */
+@media (min-width: 1001px) {
+  .filters-btn {
+    display: none !important;
+  }
+}
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.course-details .course-header {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.course-details .course-header h1 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 48px;
+  font-weight: 600;
+  color: #000000;
+  font-style: normal;
+  margin: 0px 0px 5px;
+}
+.course-details .course-header p {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+  margin: 0px 0px 10px;
+}
+.course-details .course-info {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.course-details .course-info .course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.course-details .course-info .course-tags .tag {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #E0F2FE;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+}
+.course-details {
+  /* Кнопка Start */
+}
+.course-details .enroll-redirect {
+  padding-left: 50px;
+}
+.course-details .enroll-redirect .btn.start {
+  padding: 10px 24px;
+  border-radius: 6px;
+  background: #4F46E5;
+  color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-style: normal;
+  transition: background 0.25s ease;
+}
+.course-details .enroll-redirect .btn.start:hover {
+  background: black;
+}
+.course-details {
+  /* What will you learn */
+}
+.course-details .what-learn {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.course-details .what-learn h2 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+  font-style: normal;
+  margin-bottom: 16px;
+}
+.course-details .what-learn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.course-details .what-learn ul li {
+  margin-bottom: 8px;
+  padding-left: 0;
+  position: relative; /* Позиціювання для ліній */
+}
+.course-details {
+  /* Нижній прямокутник - course-stats */
+}
+.course-details .course-stats {
+  background: #FFFFFF;
+  border: 1px solid #d3d3d3;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 50px;
+  padding: 24px 50px;
+}
+.course-details .course-stats .col {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.course-details .course-stats .col span {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  font-style: normal;
+}
+.course-details .course-stats .col img {
+  max-width: 32px;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .course-details .course-header,
+  .course-details .course-info,
+  .course-details .enroll-redirect,
+  .course-details .what-learn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .course-details .course-header ul,
+  .course-details .course-info ul,
+  .course-details .enroll-redirect ul,
+  .course-details .what-learn ul {
+    grid-template-columns: 1fr;
+  }
+  .course-details .course-stats {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .course-details .course-stats {
+    /* Для мобільної версії зробимо 2 на 2 */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* два стовпці для мобільного */
+    gap: 16px;
+    position: relative;
+    /* Горизонтальна лінія на середині */
+  }
+  .course-details .course-stats::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 80%; /* Лінія на 80% ширини */
+    height: 1px;
+    background: #E1E1E1;
+    transform: translateY(-50%);
+  }
+  .course-details .course-stats {
+    /* Вертикальна лінія */
+  }
+  .course-details .course-stats::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #E1E1E1;
+    transform: translateX(-50%);
+  }
+  .course-details .col {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.enroll-container {
+  max-width: 100vw;
+  margin: 60px auto 80px;
+  padding: 0 50px;
+  display: flex;
+  gap: 40px;
+}
+.enroll-container > .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.enroll-container > .col:first-child {
+  background: none;
+  border: none;
+  justify-content: center;
+}
+.enroll-container .course-info {
+  padding: 24px;
+  max-width: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+.enroll-container .course-info h1 {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 36px;
+  font-weight: 700;
+  color: #000000;
+  font-style: normal;
+  line-height: 1;
+  margin: 0px 0px 5px;
+  padding: 0;
+}
+.enroll-container .course-info p {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 22px;
+  font-weight: 300;
+  color: #000000;
+  font-style: normal;
+  line-height: 1;
+  margin: 0px 0px 50px;
+  padding: 0;
+}
+.enroll-container .course-info {
+  /* Оновлення для вирівнювання тексту по горизонталі */
+}
+.enroll-container .course-info .time-lessons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Вся ширина доступна для елементів */
+}
+.enroll-container .course-info .time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000;
+  font-style: normal;
+}
+.enroll-container .course-info .lessons {
+  display: flex;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2D3A4A;
+  font-style: normal;
+}
+.enroll-container .enroll-form {
+  position: relative;
+  padding: 24px;
+  background: white;
+  border: 1px solid #d3d3d3;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.enroll-container .enroll-form::after {
+  content: "";
+  position: absolute;
+  top: 50%; /* Центруємо по вертикалі */
+  left: 10%; /* Відступ від лівого краю */
+  width: 80%; /* Відстань між лівим і правим краєм */
+  height: 1px; /* Товщина лінії */
+  background-color: #E1E1E1;
+  transform: translateY(-50%); /* Центруємо лінію по вертикалі */
+}
+.enroll-container .enroll-form {
+  /* Стилі для input (radio) */
+}
+.enroll-container .enroll-form input[type=radio] {
+  margin-right: 12px; /* Відступ між кнопкою і текстом */
+  margin-bottom: 30px; /* Відступ між кнопкою і текстом */
+  accent-color: #4F46E5; /* Колір для чекнутого стану */
+  width: 18px; /* Задаємо розмір радіокнопки */
+  height: 18px;
+  cursor: pointer;
+}
+.enroll-container .enroll-form {
+  /* Стилі для label */
+}
+.enroll-container .enroll-form label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Відстань між радіокнопкою та текстом */
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2D3A4A;
+  font-style: normal;
+  /* Вибір шрифту */
+  cursor: pointer; /* Змінюємо курсор на pointer при наведенні */
+  transition: color 0.3s ease;
+}
+.enroll-container .enroll-form label:hover {
+  color: #4F46E5; /* Колір при наведенні */
+}
+.enroll-container .enroll-form {
+  /* Додатково для тексту радіокнопок */
+}
+.enroll-container .enroll-form .enroll-form label span {
+  font-size: 14px;
+  color: #505D6B;
+}
+.enroll-container .btn.solid.purple {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFFFFF;
+  font-style: normal;
+  background-color: #4F46E5;
+  color: #FFFFFF;
+  border-radius: 10px;
+  padding: 14px 22px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+.enroll-container .btn.solid.purple:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #3B3ED1;
+}
+
+@media (max-width: 1000px) {
+  .enroll-container {
+    flex-direction: column;
+    padding: 0 20px;
+    margin: 40px auto 60px;
+  }
+}
+@media (max-width: 600px) {
+  .enroll-container {
+    padding: 0 15px;
+    margin: 20px auto 40px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

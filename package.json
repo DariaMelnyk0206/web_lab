@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass public/scss/main.scss public/css/main.css --no-source-map",
+    "watch-css": "sass --watch public/scss/main.scss:public/css/main.css"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +14,9 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "sass": "^1.94.2"
   }
 }

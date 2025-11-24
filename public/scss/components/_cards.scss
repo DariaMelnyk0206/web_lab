@@ -1,0 +1,91 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    background: vars.$white;
+    border: 1px solid #d3d3d3;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 330px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        border-color: #4F46E5;
+        cursor: pointer;
+    }
+
+    .course-topic {
+        background: #E8F1FF;
+        padding: 10px 16px;
+        min-height: 36px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img { width: 18px; height: 18px; }
+
+        span { @include mixins.nunitoFont(14px, 600, #2D3A4A, normal); }
+    }
+
+    .course-content {
+        padding: 14px 16px;
+
+        h2 a {
+            @include mixins.nunitoFont(18px, 700, vars.$black, normal);
+            margin: 0 0 6px 0;
+            text-decoration: none;
+            color: vars.$black;
+
+            &:hover { text-decoration: underline; }
+        }
+
+        p {
+            margin: 0;
+            @include mixins.nunitoFont(14px, 400, #505D6B, normal);
+            line-height: 1.4;
+        }
+    }
+
+    /* Нижній блок завжди при низу картки */
+    .course-bottom {
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .course-price {
+        padding: 0 16px 10px;
+        span { @include mixins.nunitoFont(13px, 600, #2D3A4A, normal); }
+    }
+
+    .course-divider {
+        height: 1px;
+        background: #E1E1E1;
+        margin: 0 16px;
+    }
+
+    .course-footer {
+        padding: 10px 16px;
+        display: flex;
+        justify-content: space-between;  // Розташовує елементи на кінцях
+    
+        .course-meta {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+    
+            img { width: 16px; }
+            span { 
+                @include mixins.nunitoFont(13px, 500, #2D3A4A, normal); 
+            }
+        }
+    
+        .time {
+            @include mixins.nunitoFont(13px, 700, #000, normal);
+        }
+    }   
+}

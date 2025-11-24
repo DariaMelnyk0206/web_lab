@@ -1,0 +1,81 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.btn {
+    padding: 8px 22px; 
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: opacity 0.2s ease;
+}
+
+.login-btn {
+    padding: 8px 22px;
+    height: 42px;
+    border-radius: 10px;
+    background: transparent;
+    border: 2px solid vars.$white;
+    color: vars.$white;
+    cursor: pointer;
+    @include mixins.workSansFont(16px, 500, vars.$white, normal);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        opacity: 0.85;
+        
+    }
+}
+
+.signup-btn {
+    padding: 8px 22px;
+    height: 42px;
+    border-radius: 10px;
+    background: vars.$white;
+    border: 1px solid vars.$white;
+    color: vars.$blue;
+    cursor: pointer;
+    @include mixins.workSansFont(16px, 500, vars.$blue, normal);
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        opacity: 0.85;
+    }
+}
+
+.start-learning {
+    background-color: vars.$blue;
+    color: vars.$white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    @include mixins.workSansFont(22px, 600, vars.$white, normal);
+
+    transition: background-color 0.25s ease, opacity 0.25s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        opacity: 0.85;
+    }
+}
+
+.start {
+    background-color: vars.$blue;
+    color: vars.$white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    @include mixins.workSansFont(18px, 600, vars.$white, normal);
+
+    transition: background-color 0.25s ease, opacity 0.25s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        opacity: 0.85;
+    }
+}

@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css">
     <title>LearnIT</title>
 </head>
-<body style="background-color: #F6F7F8;">
+<body class="home-page">
     <%- include('partials/header') %>
 
-    <section>
-        <div class="col">
+    <section class = "hero">
+        <div class="col hero-text">
             <h1>Learn IT Skills Anytime, Anywhere</h1>
             <p>Self-paced online courses in programming, design, and tech — for beginners and beyond.</p>
-            <a href="/courses"><button class="btn solid purple">Start Learning</button></a>
+            <a href="/courses"><button class="btn start-learning">Start Learning</button></a>
         </div>
 
         <nav class="desktop">
@@ -22,7 +23,7 @@
         </nav>
     </section>
 
-    <section style="background-color: #E0F2FE;">
+    <section class = "features-section">
         <div class="col">
             <img src="/clock.png" alt="Clock icon">
             <h3>Learn at your own pace</h3>

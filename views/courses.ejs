@@ -3,96 +3,96 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css">
     <title>LearnIT — Courses</title>
 </head>
-<body style="background-color: #F6F7F8;">
+<body class="courses-page">
     <%- include('partials/header') %>
 
     <main>
-        <button class="filters btn" aria-label="Show Filters">
+        <button class="filters-btn">
             <img src="/filter.png" alt="Filter icon" class="filter-icon">
             Filters
         </button>
 
-        <div class="col">
+        <div class="col filters-col">
             <form>
-            <fieldset>
-                <legend>Level</legend>
-                <ul>
-                    <li><label><input type="checkbox" name="level"> Beginner</label></li>
-                    <li><label><input type="checkbox" name="level"> Intermediate</label></li>
-                    <li><label><input type="checkbox" name="level"> Advanced</label></li>
-                </ul>
-            </fieldset>
-        
-            <fieldset>
-                <legend>Average time to complete</legend>
-                <ul>
-                    <li><label><input type="checkbox" name="time"> Less than 5 hours</label></li>
-                    <li><label><input type="checkbox" name="time"> 5-10 hours</label></li>
-                    <li><label><input type="checkbox" name="time"> 10-20 hours</label></li>
-                    <li><label><input type="checkbox" name="time"> 20-60 hours</label></li>
-                    <li><label><input type="checkbox" name="time"> More than 60 hours</label></li>
-                </ul>
-            </fieldset>
-        
-            <fieldset>
-                <legend>Price</legend>
-                <ul>
-                    <li><label><input type="checkbox" name="price"> Free</label></li>
-                    <li><label><input type="checkbox" name="price"> Paid</label></li>
-                </ul>
-            </fieldset>
-        
-            <fieldset>
-                <legend>Topic</legend>
-                <ul>
-                    <li><label><input type="checkbox" name="topic"> Software Development</label></li>
-                    <li><label><input type="checkbox" name="topic"> Web Development</label></li>
-                    <li><label><input type="checkbox" name="topic"> Artificial Intelligence</label></li>
-                    <li><label><input type="checkbox" name="topic"> Machine Learning</label></li>
-                    <li><label><input type="checkbox" name="topic"> Data Science</label></li>
-                    <li><label><input type="checkbox" name="topic"> Data Engineering</label></li>
-                    <li><label><input type="checkbox" name="topic"> Cloud & DevOps</label></li>
-                </ul>
-            </fieldset>
+                <div class="filter-group">
+                    <legend>Level</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="level"> Beginner</label></li>
+                        <li><label><input type="checkbox" name="level"> Intermediate</label></li>
+                        <li><label><input type="checkbox" name="level"> Advanced</label></li>
+                    </ul>
+                </div>
+            
+                <div class="filter-group">
+                    <legend>Average time to complete</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="time"> Less than 5 hours</label></li>
+                        <li><label><input type="checkbox" name="time"> 5-10 hours</label></li>
+                        <li><label><input type="checkbox" name="time"> 10-20 hours</label></li>
+                        <li><label><input type="checkbox" name="time"> 20-60 hours</label></li>
+                        <li><label><input type="checkbox" name="time"> More than 60 hours</label></li>
+                    </ul>
+                </div>
+            
+                <div class="filter-group">
+                    <legend>Price</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="price"> Free</label></li>
+                        <li><label><input type="checkbox" name="price"> Paid</label></li>
+                    </ul>
+                </div>
+            
+                <div class="filter-group">
+                    <legend>Topic</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="topic"> Software Development</label></li>
+                        <li><label><input type="checkbox" name="topic"> Web Development</label></li>
+                        <li><label><input type="checkbox" name="topic"> Artificial Intelligence</label></li>
+                        <li><label><input type="checkbox" name="topic"> Machine Learning</label></li>
+                        <li><label><input type="checkbox" name="topic"> Data Science</label></li>
+                        <li><label><input type="checkbox" name="topic"> Data Engineering</label></li>
+                        <li><label><input type="checkbox" name="topic"> Cloud & DevOps</label></li>
+                    </ul>
+                </div>
 
-            <fieldset>
-                <legend>Technology</legend>
-                <ul>
-                    <li><label><input type="checkbox" name="technology"> Python</label></li>
-                    <li><label><input type="checkbox" name="technology"> C / C++</label></li>
-                    <li><label><input type="checkbox" name="technology"> Go</label></li>
-                    <li><label><input type="checkbox" name="technology"> HTML & CSS</label></li>
-                    <li><label><input type="checkbox" name="technology"> Java</label></li>
-                    <li><label><input type="checkbox" name="technology"> JavaScript</label></li>
-                    <li><label><input type="checkbox" name="technology"> Kotlin</label></li>
-                    <li><label><input type="checkbox" name="technology"> PHP</label></li>
-                    <li><label><input type="checkbox" name="technology"> R</label></li>
-                    <li><label><input type="checkbox" name="technology"> Ruby</label></li>
-                    <li><label><input type="checkbox" name="technology"> SQL</label></li>
-                    <li><label><input type="checkbox" name="technology"> Swift</label></li>
-                    <li><label><input type="checkbox" name="technology"> Rust</label></li>
-                    <li><label><input type="checkbox" name="technology"> TypeScript</label></li>
-                    <li><label><input type="checkbox" name="technology"> Scala</label></li>
-                    <li><label><input type="checkbox" name="technology"> Dart</label></li>
-                    <li><label><input type="checkbox" name="technology"> MATLAB</label></li>
-                    <li><label><input type="checkbox" name="technology"> Bash</label></li>
-                </ul>
-            </fieldset>
+                <div class="filter-group">
+                    <legend>Technology</legend>
+                    <ul>
+                        <li><label><input type="checkbox" name="technology"> Python</label></li>
+                        <li><label><input type="checkbox" name="technology"> C / C++</label></li>
+                        <li><label><input type="checkbox" name="technology"> Go</label></li>
+                        <li><label><input type="checkbox" name="technology"> HTML & CSS</label></li>
+                        <li><label><input type="checkbox" name="technology"> Java</label></li>
+                        <li><label><input type="checkbox" name="technology"> JavaScript</label></li>
+                        <li><label><input type="checkbox" name="technology"> Kotlin</label></li>
+                        <li><label><input type="checkbox" name="technology"> PHP</label></li>
+                        <li><label><input type="checkbox" name="technology"> R</label></li>
+                        <li><label><input type="checkbox" name="technology"> Ruby</label></li>
+                        <li><label><input type="checkbox" name="technology"> SQL</label></li>
+                        <li><label><input type="checkbox" name="technology"> Swift</label></li>
+                        <li><label><input type="checkbox" name="technology"> Rust</label></li>
+                        <li><label><input type="checkbox" name="technology"> TypeScript</label></li>
+                        <li><label><input type="checkbox" name="technology"> Scala</label></li>
+                        <li><label><input type="checkbox" name="technology"> Dart</label></li>
+                        <li><label><input type="checkbox" name="technology"> MATLAB</label></li>
+                        <li><label><input type="checkbox" name="technology"> Bash</label></li>
+                    </ul>
+                </div>
             </form>
         </div>
 
-        <div class="col">
+        <div class="col courses-col">
             <% if (courses && courses.length > 0) { %>
-                <% courses.forEach(course => { %>
-                    <%- include('partials/courseCard', { course: course }) %>
-                    <hr>
-                <% }) %>
-                <% } else { %>
-                    <p>No courses available</p>
+              <% courses.forEach(course => { %>
+                <%- include('partials/courseCard', { course: course }) %>
+              <% }) %>
+            <% } else { %>
+              <p>No courses available</p>
             <% } %>
-        </div>
+          </div>
     </main>
 
     <%- include('partials/footer') %>

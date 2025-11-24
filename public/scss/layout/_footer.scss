@@ -1,0 +1,95 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.footer-container {
+    background-color: #E0F2FE;
+    padding: 60px 40px 30px;
+    border-top: 1px solid #c3d5e8;
+
+    .footer-columns {
+        max-width: 100vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 40px;
+        position: relative;
+
+        /* вертикальна лінія тільки на desktop */
+        &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: #c3d5e8;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h4 {
+                @include mixins.workSansFont(18px, 600, vars.$black, normal);
+                margin-bottom: 8px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                li {
+                    @include mixins.nunitoFont(16px, 400, vars.$black, normal);
+                    cursor: pointer;
+                    transition: transform 0.25s ease, opacity 0.25s ease;
+
+                    &:hover {
+                        opacity: 0.8;
+                        transform: translateY(-2px);
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        max-width: 1400px;
+        margin: 30px auto 0;
+        display: flex;
+        justify-content: flex-end;
+
+        p {
+            @include mixins.nunitoFont(16px, 400, vars.$black, normal);
+            opacity: 0.6;
+        }
+    }
+}
+
+/* ---------- MOBILE (<900px) ---------- */
+@media (max-width: 900px) {
+    .footer-container {
+        padding: 40px 20px 20px;
+
+        .footer-columns {
+            grid-template-columns: repeat(2, 1fr);  // 🔥 2 колонки в ряд
+            gap: 20px 30px;
+
+            &::after {
+                display: none; // 🔥 прибираємо вертикальну лінію
+            }
+        }
+
+        .footer-bottom {
+            max-width: 100vw;
+            margin-top: 20px;
+            display: flex;
+            text-align: flex-end;
+        }
+    }
+}

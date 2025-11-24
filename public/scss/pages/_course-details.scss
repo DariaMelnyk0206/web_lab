@@ -1,0 +1,178 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/mixins" as mixins;
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .course-header {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    h1 {
+      @include mixins.workSansFont(48px, 600, vars.$black, normal);
+      margin: 0px 0px 5px;
+    }
+
+    p {
+      @include mixins.workSansFont(20px, 400, vars.$black, normal);
+      margin: 0px 0px 10px;
+    }
+  }
+
+  .course-info {
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .course-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .tag {
+        padding: 6px 12px;
+        border-radius: 10px;
+        background: #E0F2FE;
+        @include mixins.nunitoFont(14px, 400, vars.$black, normal);
+      }
+    }
+  }
+
+  /* Кнопка Start */
+  .enroll-redirect {
+    padding-left: 50px;
+
+    .btn.start {
+      padding: 10px 24px;
+      border-radius: 6px;
+      background: vars.$blue;
+      color: vars.$white;
+      border: none;
+      cursor: pointer;
+      @include mixins.nunitoFont(16px, 600, vars.$white, normal);
+      transition: background 0.25s ease;
+
+      &:hover {
+        background: darken(vars.$black, 10%);
+      }
+    }
+  }
+
+  /* What will you learn */
+  .what-learn {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    h2 {
+      @include mixins.workSansFont(24px, 600, vars.$black, normal);
+      margin-bottom: 16px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); // два стовпці для desktop
+      gap: 12px;
+
+      li {
+        margin-bottom: 8px;
+        padding-left: 0; // якщо потрібно прибрати маркери
+        position: relative; /* Позиціювання для ліній */
+      }
+    }
+  }
+
+  /* Нижній прямокутник - course-stats */
+  .course-stats {
+    background: vars.$white;
+    border: 1px solid #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 50px;
+    padding: 24px 50px;
+
+    .col {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+        @include mixins.nunitoFont(16px, 400, vars.$black, normal);
+      }
+
+      img {
+        max-width: 32px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .course-details {
+    .course-header,
+    .course-info,
+    .enroll-redirect,
+    .what-learn {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      ul {
+        grid-template-columns: 1fr; // один стовпець на мобільному
+      }
+    }
+
+    .course-stats {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .course-stats {
+      /* Для мобільної версії зробимо 2 на 2 */
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* два стовпці для мобільного */
+      gap: 16px;
+      position: relative;
+
+      /* Горизонтальна лінія на середині */
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 80%; /* Лінія на 80% ширини */
+        height: 1px;
+        background: #E1E1E1;
+        transform: translateY(-50%);
+      }
+
+      /* Вертикальна лінія */
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 1px;
+        height: 100%;
+        background: #E1E1E1;
+        transform: translateX(-50%);
+      }
+    }
+
+    .col {
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
