@@ -15,7 +15,7 @@
             Filters
         </button>
 
-        <div class="col filters-col">
+        <div class="filters-col">
             <form>
                 <div class="filter-group">
                     <legend>Level</legend>
@@ -84,7 +84,7 @@
             </form>
         </div>
 
-        <div class="col courses-col">
+        <div class="courses-col">
             <% if (courses && courses.length > 0) { %>
               <% courses.forEach(course => { %>
                 <%- include('partials/courseCard', { course: course }) %>

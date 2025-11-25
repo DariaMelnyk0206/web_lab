@@ -92,3 +92,34 @@ button.mobile[aria-label="more"] {
 
     @include mixins.hover-translate();
 }
+
+.filters-btn {
+    display: none;
+    width: 100px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid vars.$gray;
+    background: vars.$white;
+    cursor: pointer;
+    @include mixins.nunitoFont(14px, 600, vars.$black, normal);
+    @include mixins.hover-blue();
+}
+
+@media (max-width: 768px) {
+    .filters-btn {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+
+.solid-purple {
+    @include mixins.workSansFont(18px, 600, vars.$white, normal);
+    background-color: vars.$blue;
+    color: vars.$white;
+    border-radius: 10px;
+    padding: 14px 22px;
+    border: none;
+    cursor: pointer;
+    
+    @include mixins.hover-translate();
+}

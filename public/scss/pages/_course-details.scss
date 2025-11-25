@@ -3,12 +3,11 @@
 
 .course-details {
   display: flex;
+  padding: 50px 50px 50px 50px;
   flex-direction: column;
   gap: 40px;
 
   .course-header {
-    padding-left: 50px;
-    padding-right: 50px;
 
     h1 {
       @include mixins.workSansFont(48px, 600, vars.$black, normal);
@@ -22,8 +21,6 @@
   }
 
   .course-info {
-    padding-left: 50px;
-    padding-right: 50px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -36,36 +33,13 @@
       .tag {
         padding: 6px 12px;
         border-radius: 10px;
-        background: #E0F2FE;
+        background: vars.$light-blue;
         @include mixins.nunitoFont(14px, 400, vars.$black, normal);
       }
     }
   }
 
-  /* Кнопка Start */
-  .enroll-redirect {
-    padding-left: 50px;
-
-    .btn.start {
-      padding: 10px 24px;
-      border-radius: 6px;
-      background: vars.$blue;
-      color: vars.$white;
-      border: none;
-      cursor: pointer;
-      @include mixins.nunitoFont(16px, 600, vars.$white, normal);
-      transition: background 0.25s ease;
-
-      &:hover {
-        background: darken(vars.$black, 10%);
-      }
-    }
-  }
-
-  /* What will you learn */
   .what-learn {
-    padding-left: 50px;
-    padding-right: 50px;
 
     h2 {
       @include mixins.workSansFont(24px, 600, vars.$black, normal);
@@ -73,32 +47,33 @@
     }
 
     ul {
+      @include mixins.workSansFont(16px, 400, vars.$black, normal);
       list-style: none;
       padding: 0;
       margin: 0;
 
       display: grid;
-      grid-template-columns: repeat(2, 1fr); // два стовпці для desktop
+      grid-template-columns: repeat(2, 1fr);
       gap: 12px;
 
       li {
         margin-bottom: 8px;
-        padding-left: 0; // якщо потрібно прибрати маркери
-        position: relative; /* Позиціювання для ліній */
+        padding-left: 0;
+        position: relative;
       }
     }
   }
 
-  /* Нижній прямокутник - course-stats */
   .course-stats {
     background: vars.$white;
-    border: 1px solid #d3d3d3;
+    border: 1px solid vars.$gray;
     display: flex;
-    justify-content: space-between;
-    margin: 0 50px;
-    padding: 24px 50px;
+    justify-content: space-center;
+    padding: 30px 50px;
 
     .col {
+      width: 25%;
+      justify-content: center;
       flex: 1;
       display: flex;
       align-items: center;
@@ -116,18 +91,29 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .course-details {
-    .course-header,
+    .course-header{
+        h1 {
+            @include mixins.workSansFont(32px, 600, vars.$black, normal);
+        }
+        p {
+            @include mixins.workSansFont(16px, 400, vars.$black, normal);
+        }
+    }
     .course-info,
     .enroll-redirect,
     .what-learn {
-      padding-left: 20px;
-      padding-right: 20px;
-
-      ul {
-        grid-template-columns: 1fr; // один стовпець на мобільному
-      }
+        h2 {
+            @include mixins.workSansFont(16px, 600, vars.$black, normal);
+            margin-bottom: 30px;
+          }
+        ul {
+            grid-template-columns: 1fr;
+            @include mixins.workSansFont(14px, 400, vars.$black, normal);
+            line-height: 1;
+            margin-bottom: 1px;
+        }
     }
 
     .course-stats {
@@ -136,43 +122,55 @@
     }
 
     .course-stats {
-      /* Для мобільної версії зробимо 2 на 2 */
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* два стовпці для мобільного */
-      gap: 16px;
-      position: relative;
-
-      /* Горизонтальна лінія на середині */
-      &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 80%; /* Лінія на 80% ширини */
-        height: 1px;
-        background: #E1E1E1;
-        transform: translateY(-50%);
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        position: relative;
+      
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: vars.$gray;
+        }
+      
+        &::before {
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          transform: translateY(-50%);
+        }
+      
+        &::after {
+          top: 0;
+          left: 50%;
+          width: 1px;
+          height: 100%;
+          transform: translateX(-50%);
+        }
+      
+        .col {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            gap: 6px;
+    
+            span {
+              @include mixins.nunitoFont(12px, 400, vars.$black, normal);
+              line-height: 1.2;
+              text-align: center;
+            }
+    
+            img {
+              max-width: 22px;
+              height: auto;
+            }
+          }
       }
-
-      /* Вертикальна лінія */
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 1px;
-        height: 100%;
-        background: #E1E1E1;
-        transform: translateX(-50%);
-      }
-    }
-
-    .col {
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
+  }      
 }

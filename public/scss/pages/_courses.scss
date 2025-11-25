@@ -2,68 +2,61 @@
 @use "../abstracts/mixins" as mixins;
 
 .courses-page main {
-  max-width: 100vw;
-  margin: 40px 50px 80px;
-  padding: 0 20px;
-  display: flex;
-  gap: 20px;
-  box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin: 50px 0;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
 }
 
-/* Кнопка фільтрів */
-.filters-btn {
-  display: none;  // прихована за замовчуванням
-  width: 100%;
-  padding: 10px 16px;
-  border-radius: 6px;
-  border: 1px solid #d3d3d3;
-  background: vars.$white;
-  cursor: pointer;
-  @include mixins.nunitoFont(14px, 600, vars.$black, normal);
-}
-
-/* Блок фільтрів */
 .filters-col {
-  flex: 0 0 280px;
-  background: vars.$white;
-  padding: 16px 20px;
-  border-radius: 12px;
-  border: 1px solid #d3d3d3;
-  overflow-y: auto;
-  max-height: 600px;
-  box-sizing: border-box;
+    flex: 0 0 280px;
+    margin: 0;
+    background: vars.$white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    border: 1px solid vars.$gray;
+    overflow-y: auto;
+    max-height: 600px;
+    box-sizing: border-box;
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
 
-    ul, ol {
-      list-style: none; // прибираємо кружки
-      padding: 0;
-      margin: 0;
-    }
-  }
-
-  .filter-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid #E1E1E1;
-      padding-bottom: 12px;
-      margin-bottom: 12px;
+        ul, ol {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
     }
 
-    label {
-      @include mixins.nunitoFont(14px, 500, #2D3A4A, normal);
-      cursor: pointer;
+    .filter-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid vars.$gray;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+        }
+
+        legend {
+            @include mixins.nunitoFont(14px, 700, vars.$black, normal);
+            margin-bottom: 6px;
+        }
+
+        label {
+            @include mixins.nunitoFont(14px, 500, vars.$black, normal);
+            cursor: pointer;
+        }
     }
-  }
 }
 
-/* Картки курсів */
 .courses-col {
   flex: 1;
   display: grid;
@@ -74,30 +67,32 @@
 
   .course-card {
     display: flex;
+    flex: 1;
+    width: 100%;
     flex-direction: column;
-    height: 250px;
+    height: 270px;
     background: vars.$white;
-    border: 1px solid #d3d3d3;
-    border-radius: 12px;
+    border: 1px solid vars.$gray;
+    border-radius: 10px;
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
     &:hover {
       transform: translateY(-4px);
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      border-color: #4F46E5;
+      border-color: vars.$blue;
       cursor: pointer;
     }
 
     .course-topic {
-      background: #E8F1FF;
+      background: vars.$light-blue;
       padding: 10px 16px;
       display: flex;
       align-items: center;
       gap: 8px;
 
       img { width: 18px; height: 18px; }
-      span { @include mixins.nunitoFont(14px, 600, #2D3A4A, normal); }
+      span { @include mixins.nunitoFont(14px, 600, vars.$black, normal); }
     }
 
     .course-content {
@@ -109,7 +104,7 @@
         color: vars.$black;
       }
       p {
-        @include mixins.nunitoFont(12px, 400, #505D6B, normal);
+        @include mixins.nunitoFont(12px, 400, vars.$black, normal);
         line-height: 1.3;
         margin: 0;
       }
@@ -124,59 +119,48 @@
       .course-price { font-size: 12px; }
       .course-divider {
         height: 1px;
-        background: #E1E1E1;
+        background: vars.$gray;
         margin: 0;
       }
 
       .course-footer {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end; // по нижньому краю
+        align-items: flex-end;
 
         .time {
-          order: 0; // час зліва
-          @include mixins.nunitoFont(12px, 700, #000, normal);
+          order: 0;
+          @include mixins.nunitoFont(12px, 700, vars.$black, normal);
         }
 
         .course-meta {
-          order: 1; // рівень справа
+          order: 1;
           display: flex;
           align-items: center;
           gap: 6px;
 
           img { width: 16px; }
-          span { @include mixins.nunitoFont(12px, 500, #2D3A4A, normal); }
+          span { @include mixins.nunitoFont(12px, 500, vars.$black, normal); }
         }
       }
     }
   }
 }
 
-/* Мобільна версія */
-@media (max-width: 1000px) {
-  .courses-page main {
-    flex-direction: column;
-    padding: 0 10px;
-  }
-
-  .filters-btn {
-    display: block;   // кнопка над картками
-    margin-bottom: 16px;
-  }
-
-  .filters-col {
-    display: none;    // фільтри сховані на мобільних
-  }
-
-  .courses-col {
-    grid-template-columns: 1fr;
-  }
+@media (max-width: 768px) {
+    .courses-page main {
+      flex-direction: column;
+      width: 100%;
+      padding: 0px 50px 0 50px;
+    }
+  
+    .courses-col {
+      width: 100% !important;
+      grid-template-columns: 1fr;
+    }
+  
+    .filters-col {
+      display: none;
+    }
 }
-
-/* Десктоп: кнопка завжди прихована */
-@media (min-width: 1001px) {
-  .filters-btn {
-    display: none !important;
-  }
-}
-
+   

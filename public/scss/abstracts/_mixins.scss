@@ -1,3 +1,5 @@
+@use "../abstracts/vars" as vars;
+
 /* ---- Typography ---- */
 @mixin firaCodeFont($size, $weight, $color, $style) {
     font-family: 'Fira Code', monospace;
@@ -47,6 +49,15 @@
         box-shadow: 0 0 20px 20px rgba(0,0,0,0.08);
     }
 }
+
+
+@mixin hover-blue() {
+    &:hover {
+        transform: translateY(-2px);
+        background: vars.$light-blue;
+    }
+}
+
 /* ---- FLEX ---- */
 @mixin flex($align: center, $justify: center, $direction: row, $gap: null) {
     display: flex;
