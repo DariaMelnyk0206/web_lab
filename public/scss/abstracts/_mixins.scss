@@ -26,6 +26,27 @@
     font-style: $style;
 }
 
+@mixin hover-scale($scale: 1.1, $duration: 0.3s, $ease: ease-in-out) {
+    transition: transform $duration $ease;
+    &:hover {
+        opacity: 0.85;
+        transform: scale($scale);
+    }
+}
+
+@mixin hover-translate() {
+    &:hover {
+        opacity: 0.85;
+        transform: translateY(-2px);
+    }
+}
+
+@mixin hover-shadow() {
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 0 20px 20px rgba(0,0,0,0.08);
+    }
+}
 /* ---- FLEX ---- */
 @mixin flex($align: center, $justify: center, $direction: row, $gap: null) {
     display: flex;
