@@ -1,16 +1,33 @@
-@keyframes scale-up {
-    from {
-        transform: scale(1);
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    to {
-        transform: scale(1.05);
-        opacity: 0.85;
+  
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-@mixin hover-scale($duration: 0.3s, $ease: ease) {
-    transition: transform $duration $ease;
-    &:hover {
-        animation: scale-up $duration $ease;
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+  
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); // кінцева позиція
     }
 }

@@ -1,6 +1,5 @@
 @use "../abstracts/vars" as vars;
 
-/* ---- Typography ---- */
 @mixin firaCodeFont($size, $weight, $color, $style) {
     font-family: 'Fira Code', monospace;
     font-optical-sizing: auto;
@@ -56,61 +55,4 @@
         transform: translateY(-2px);
         background: vars.$light-blue;
     }
-}
-
-/* ---- FLEX ---- */
-@mixin flex($align: center, $justify: center, $direction: row, $gap: null) {
-    display: flex;
-    align-items: $align;
-    justify-content: $justify;
-    flex-direction: $direction;
-
-    @if $gap != null {
-        gap: $gap;
-    }
-}
-
-/* ---- GRID ---- */
-@mixin grid($columns: 1fr, $gap: 0) {
-    display: grid;
-    grid-template-columns: $columns;
-    gap: $gap;
-}
-
-/* ---- CONTAINER ---- */
-@mixin container($max: 1400px, $padding: 50px) {
-    width: 100%;
-    max-width: $max;
-    margin: 0 auto;
-    padding-left: $padding;
-    padding-right: $padding;
-    box-sizing: border-box;
-}
-
-/* ---- REM FUNCTION ---- */
-@function rem($px) {
-    @return ($px / 16) * 1rem;
-}
-
-/* ---- COLOR MIX ---- */
-@function mix-color($color1, $color2, $percent) {
-    @return color-mix(in srgb, $color1 $percent, $color2);
-}
-
-/* ---- RESPONSIVE ---- */
-@mixin respond($break) {
-    @if $break == tablet {
-        @media (max-width: 1000px) { @content; }
-    }
-    @else if $break == mobile {
-        @media (max-width: 600px) { @content; }
-    }
-}
-
-@mixin animate($name, $duration: 0.6s, $delay: 0s, $ease: ease-out, $fill: both) {
-    animation-name: $name;
-    animation-duration: $duration;
-    animation-delay: $delay;
-    animation-timing-function: $ease;
-    animation-fill-mode: $fill;
 }
