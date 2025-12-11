@@ -1137,7 +1137,7 @@ button.mobile[aria-label=more]:hover {
   padding: 24px;
   background: #FFFFFF;
   border: 1px solid #9298A3;
-  border-radius: 12px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1149,6 +1149,8 @@ button.mobile[aria-label=more]:hover {
   align-items: center;
   gap: 10px;
   width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-size: 16px;
@@ -1172,9 +1174,9 @@ button.mobile[aria-label=more]:hover {
   min-height: 40px;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
-  font-size: 16px;
-  font-weight: 600;
-  color: #000000;
+  font-size: 20px;
+  font-weight: 700;
+  color: #4F46E5;
   font-style: normal;
 }
 #enroll-message-container .btn {
@@ -1186,15 +1188,16 @@ button.mobile[aria-label=more]:hover {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: "Nunito", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-optical-sizing: auto;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   color: #FFFFFF;
   font-style: normal;
 }
 #enroll-message-container .btn:hover {
-  opacity: 0.9;
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
 
 .enroll-btn-wrapper {

@@ -69,7 +69,7 @@
     padding: 24px;
     background: vars.$white;
     border: 1px solid vars.$gray;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -81,6 +81,8 @@
       align-items: center;
       gap: 10px;
       width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
       @include mixins.nunitoFont(16px, 500, vars.$black, normal);
     }
   
@@ -99,29 +101,27 @@
   #enroll-message-container {
     margin-top: 16px;
     min-height: 40px;
-    @include mixins.nunitoFont(16px, 600, vars.$black, normal);
+    @include mixins.nunitoFont(20px, 700, vars.$blue, normal);
   
     .btn {
       display: block;
-      margin-top: 10px; // кнопка “Скинути” під текстом
+      margin-top: 10px;
       padding: 10px 16px;
       background-color: vars.$blue;
       color: vars.$white;
       border: none;
       border-radius: 8px;
       cursor: pointer;
-      @include mixins.nunitoFont(14px, 500, vars.$white, normal);
+      @include mixins.workSansFont(18px, 600, vars.$white, normal);
   
-      &:hover {
-        opacity: 0.9;
-      }
+      @include mixins.hover-translate();
     }
   }
   
   .enroll-btn-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 16px; // відстань від форми до кнопки Enroll
+    margin-top: 16px;
   }
   
   h3 {

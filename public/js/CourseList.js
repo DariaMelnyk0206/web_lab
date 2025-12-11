@@ -9,7 +9,7 @@ export default class CourseList {
 
         this.allCourses = [];
         this.filteredCourses = [];
-        this.limit = 5;
+        this.limit = 6;
         this.offset = 0;
         this.loading = false;
 
@@ -26,7 +26,7 @@ export default class CourseList {
             // Фільтри
             this.filtersForm.addEventListener("change", () => this.updateCourses());
     
-            // Пошук тільки по кнопці
+            // Пошук по кнопці
             const searchBtn = document.querySelector("header button[aria-label='submit']");
             if (searchBtn) {
                 searchBtn.addEventListener("click", e => {
@@ -49,7 +49,6 @@ export default class CourseList {
             this.container.innerHTML = "<p>Не вдалося завантажити курси.</p>";
         }
     }
-    
 
     applySearch() {
         const value = this.searchInput.value.trim();

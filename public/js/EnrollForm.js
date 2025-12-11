@@ -18,7 +18,7 @@ export default class EnrollForm {
     }
 
     if (this.isFree) {
-      // Безкоштовний курс — кнопка під лівою колонкою
+      // Безкоштовний курс
       const container = document.querySelector('.enroll-container .col:first-child');
       const btn = document.createElement('button');
       btn.textContent = 'Enroll';
@@ -68,11 +68,9 @@ export default class EnrollForm {
 
   hideFormOrButton() {
     if (this.isFree) {
-      // Для безкоштовного курсу кнопка в лівій колонці
       const btn = document.querySelector('.enroll-container .col:first-child button');
       if (btn) btn.style.display = 'none';
     } else {
-      // Для платного курсу ховаємо всю праву колонку
       const rightCol = document.querySelector('.enroll-container .col:last-child');
       if (rightCol) rightCol.style.display = 'none';
     }
@@ -93,11 +91,9 @@ export default class EnrollForm {
     if (!messageContainer) return;
 
     messageContainer.textContent = 'You are enrolled in this course!';
-    messageContainer.style.color = 'green';
-    messageContainer.style.fontWeight = 'bold';
 
     const resetBtn = document.createElement('button');
-    resetBtn.textContent = 'Скинути записування';
+    resetBtn.textContent = 'Reset';
     resetBtn.className = 'btn';
     resetBtn.style.marginTop = '10px';
     messageContainer.appendChild(resetBtn);

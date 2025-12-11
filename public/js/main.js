@@ -1,4 +1,3 @@
-// main.js
 import CourseList from './CourseList.js';
 import CourseService from './api/CourseService.js';
 
@@ -34,9 +33,7 @@ function router() {
 
     if (route === 'list') renderList();
     else if (route === 'item' && id) renderItem(id);
-    // enroll тепер обробляє сервер, JS тут не потрібен
 }
 
-// слухаємо зміни hash та DOMContentLoaded
 window.addEventListener('hashchange', router);
 window.addEventListener('DOMContentLoaded', router);

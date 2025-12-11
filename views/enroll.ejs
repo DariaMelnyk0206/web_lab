@@ -60,7 +60,6 @@
     const isFree = '<%= course.price %>' === 'Free';
 
     if (isFree) {
-      // Безкоштовний курс — права колонка не потрібна, кнопка під лівою колонкою
       new EnrollForm(null, courseId, true);
     } else {
       new EnrollForm('form[data-course-id]', courseId);

@@ -54,7 +54,7 @@
       "topic": "Machine Learning",
       "title": "Applied Machine Learning with Python",
       "description": "Build predictive models using Python libraries and apply ML techniques to solve real-world problems.",
-      "price": "",
+      "price": "Paid",
       "level": "Intermediate",
       "duration": "52 hours",
       "technology": [
@@ -79,7 +79,7 @@
       "topic": "Cloud & DevOps",
       "title": "Cloud Computing with AWS",
       "description": "Understand the fundamentals of cloud infrastructure, automation, and scalable deployment pipelines.",
-      "price": "",
+      "price": "Paid",
       "level": "Intermediate",
       "duration": "18 hours",
       "technology": [
@@ -104,7 +104,7 @@
       "topic": "Data Engineering",
       "title": "Data Engineering with SQL and Python",
       "description": "Learn how to design, build, and maintain scalable data pipelines using SQL and Python.",
-      "price": "",
+      "price": "Paid",
       "level": "Intermediate",
       "duration": "28 hours",
       "technology": [
@@ -128,7 +128,7 @@
       "topic": "Software Development",
       "title": "Object-Oriented Programming in C++",
       "description": "Dive into classes, inheritance, and polymorphism to master OOP principles with C++.",
-      "price": "",
+      "price": "Paid",
       "level": "Advanced",
       "duration": "65 hours",
       "technology": [
@@ -152,7 +152,7 @@
       "topic": "Web Development",
       "title": "React for Beginners",
       "description": "Learn React.js fundamentals and build interactive single-page applications.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Beginner",
       "duration": "20 hours",
       "technology": [
@@ -176,7 +176,7 @@
       "topic": "Machine Learning",
       "title": "Deep Learning with TensorFlow",
       "description": "Explore neural networks and build deep learning models with TensorFlow.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Advanced",
       "duration": "60 hours",
       "technology": [
@@ -200,7 +200,7 @@
       "topic": "Data Science",
       "title": "Data Analysis with Python",
       "description": "Perform data analysis using pandas, NumPy, and Matplotlib.",
-      "price": "Free course",
+      "price": "Free",
       "level": "Beginner",
       "duration": "12 hours",
       "technology": [
@@ -224,7 +224,7 @@
       "topic": "Web Development",
       "title": "Node.js and Express",
       "description": "Build server-side applications with Node.js and Express framework.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Intermediate",
       "duration": "30 hours",
       "technology": [
@@ -236,7 +236,7 @@
       "videos": 40,
       "lessons": 14,
       "rating": 4.8,
-      "likes": 0,
+      "likes": 1,
       "whatLearn": [
         "Create RESTful APIs.",
         "Handle routing and middleware.",
@@ -249,7 +249,7 @@
       "topic": "Cloud & DevOps",
       "title": "Docker Essentials",
       "description": "Learn containerization with Docker and manage applications efficiently.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Beginner",
       "duration": "10 hours",
       "technology": [
@@ -273,7 +273,7 @@
       "topic": "Artificial Intelligence",
       "title": "Natural Language Processing",
       "description": "Analyze and process text data with NLP techniques in Python.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Intermediate",
       "duration": "25 hours",
       "technology": [
@@ -284,7 +284,7 @@
       "videos": 22,
       "lessons": 12,
       "rating": 4.7,
-      "likes": 0,
+      "likes": 1,
       "whatLearn": [
         "Text preprocessing techniques.",
         "Build NLP pipelines.",
@@ -297,7 +297,7 @@
       "topic": "Software Development",
       "title": "Agile Software Development",
       "description": "Learn Agile methodologies and Scrum framework for effective team management.",
-      "price": "Free course",
+      "price": "Free",
       "level": "Intermediate",
       "duration": "16 hours",
       "technology": [
@@ -321,7 +321,7 @@
       "topic": "Data Engineering",
       "title": "Big Data with Hadoop",
       "description": "Learn to store and process large datasets with Hadoop ecosystem.",
-      "price": "Paid course",
+      "price": "Paid",
       "level": "Advanced",
       "duration": "55 hours",
       "technology": [
@@ -345,7 +345,7 @@
       "topic": "Web Development",
       "title": "Advanced CSS and Animations",
       "description": "Master CSS layouts, transitions, and animations for modern web design.",
-      "price": "Free course",
+      "price": "Free",
       "level": "Advanced",
       "duration": "22 hours",
       "technology": [
@@ -356,7 +356,7 @@
       "videos": 25,
       "lessons": 10,
       "rating": 4.7,
-      "likes": 0,
+      "likes": 1,
       "whatLearn": [
         "Create responsive layouts.",
         "Use Flexbox and Grid effectively.",
@@ -367,199 +367,14 @@
   ],
   "enrollments": [
     {
-      "id": 1765478804702,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765479168401,
-      "courseId": 8,
+      "id": 1765494022786,
+      "courseId": 10,
       "plan": "trial"
     },
     {
-      "id": 1765479277414,
-      "courseId": 8,
+      "id": 1765494898844,
+      "courseId": 12,
       "plan": "trial"
-    },
-    {
-      "id": 1765479437753,
-      "courseId": 7,
-      "plan": "trial"
-    },
-    {
-      "id": 1765479518970,
-      "courseId": 7,
-      "plan": "trial"
-    },
-    {
-      "id": 1765479523690,
-      "courseId": 7,
-      "plan": "full"
-    },
-    {
-      "id": 1765479874543,
-      "courseId": 6,
-      "plan": "full"
-    },
-    {
-      "id": 1765483168370,
-      "courseId": 6,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484101842,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484145409,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484362931,
-      "courseId": 9,
-      "plan": "full"
-    },
-    {
-      "id": 1765484377016,
-      "courseId": 9,
-      "plan": "full"
-    },
-    {
-      "id": 1765484423215,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484425726,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484677742,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765484860369,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485002451,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485079742,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485239808,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485284469,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485328207,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485346879,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485473476,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485691777,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485876339,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765485879867,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765486257789,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765486419474,
-      "courseId": 9,
-      "plan": "trial"
-    },
-    {
-      "id": 1765486661504,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765486745868,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765486751136,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765486802048,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487034509,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487126401,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487131011,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487171847,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487272581,
-      "courseId": 8,
-      "plan": "full"
-    },
-    {
-      "id": 1765487348920,
-      "courseId": 3,
-      "plan": "trial"
-    },
-    {
-      "id": 1765487362593,
-      "courseId": 3,
-      "plan": "full"
     }
   ]
 }
