@@ -2,6 +2,7 @@
 На головній сторінці Start Learning веде на сторінку курсів
 <img width="1898" height="909" alt="image" src="https://github.com/user-attachments/assets/e7540dfb-5f16-4815-b3f8-b7bd96235dd3" />
 <img width="609" height="846" alt="image" src="https://github.com/user-attachments/assets/eb566be7-fd48-40a0-85fe-a5a9c773a72d" />
+
 На сторінці курсів бачимо картки курсів з ключовою інформацією та фільтри
 <img width="1902" height="910" alt="image" src="https://github.com/user-attachments/assets/c28cbfb5-648d-4beb-abb8-8c48218f3a70" />
 <img width="1903" height="911" alt="image" src="https://github.com/user-attachments/assets/01615bb9-d409-4253-8038-a5809d9f44c0" />
