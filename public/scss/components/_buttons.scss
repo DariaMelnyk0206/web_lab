@@ -1,14 +1,6 @@
 @use "../abstracts/vars" as vars;
 @use "../abstracts/mixins" as mixins;
 
-.btn {
-    padding: 8px 22px; 
-    border-radius: 8px;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: opacity 0.2s ease;
-}
-
 button[aria-label="submit"] {
     width: 42px;
     height: 42px;
@@ -110,7 +102,7 @@ button.mobile[aria-label="more"] {
       display: block;
       margin-bottom: 16px;
     }
-  }
+}
 
 .solid-purple {
     @include mixins.workSansFont(18px, 600, vars.$white, normal);

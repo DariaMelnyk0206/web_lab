@@ -1,0 +1,565 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "topic": "Web Development",
+      "title": "Introduction to Web Development",
+      "description": "Learn the basics of HTML, CSS, and JavaScript to start building modern websites at your own pace.",
+      "price": "Free",
+      "level": "Beginner",
+      "duration": "24 hours",
+      "technology": [
+        "HTML & CSS",
+        "JavaScript"
+      ],
+      "exercises": 20,
+      "videos": 35,
+      "lessons": 12,
+      "rating": 4.8,
+      "likes": 21,
+      "whatLearn": [
+        "Understand how the web works and how browsers display web pages.",
+        "Write clean and structured HTML code.",
+        "Style and format pages using CSS.",
+        "Use JavaScript to add interactivity and dynamic behavior.",
+        "Create a simple but functional web project (personal page or landing page)."
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Artificial Intelligence",
+      "title": "Introduction to Artificial Intelligence",
+      "description": "Learn the fundamentals of AI, from logic-based models to neural networks, and how they drive intelligent systems.",
+      "price": "Free",
+      "level": "Beginner",
+      "duration": "15 hours",
+      "technology": [
+        "Python",
+        "MATLAB"
+      ],
+      "exercises": 15,
+      "videos": 25,
+      "lessons": 10,
+      "rating": 4.7,
+      "likes": 2,
+      "whatLearn": [
+        "Understand the basic concepts of AI and intelligent agents.",
+        "Learn about search algorithms and problem-solving techniques.",
+        "Get introduced to neural networks and machine learning basics.",
+        "Explore real-world applications of AI in different domains."
+      ]
+    },
+    {
+      "id": 3,
+      "topic": "Machine Learning",
+      "title": "Applied Machine Learning with Python",
+      "description": "Build predictive models using Python libraries and apply ML techniques to solve real-world problems.",
+      "price": "",
+      "level": "Intermediate",
+      "duration": "52 hours",
+      "technology": [
+        "Python",
+        "R",
+        "SQL"
+      ],
+      "exercises": 30,
+      "videos": 42,
+      "lessons": 16,
+      "rating": 4.9,
+      "likes": 6,
+      "whatLearn": [
+        "Prepare and process datasets for ML tasks.",
+        "Build and evaluate supervised and unsupervised models.",
+        "Use Python libraries for data analysis and modeling.",
+        "Apply ML techniques to real-world scenarios."
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Cloud & DevOps",
+      "title": "Cloud Computing with AWS",
+      "description": "Understand the fundamentals of cloud infrastructure, automation, and scalable deployment pipelines.",
+      "price": "",
+      "level": "Intermediate",
+      "duration": "18 hours",
+      "technology": [
+        "Go",
+        "Bash",
+        "Java"
+      ],
+      "exercises": 18,
+      "videos": 30,
+      "lessons": 11,
+      "rating": 4.6,
+      "likes": 0,
+      "whatLearn": [
+        "Understand cloud computing concepts and AWS services.",
+        "Learn deployment automation and CI/CD pipelines.",
+        "Manage scalable cloud infrastructure.",
+        "Explore DevOps best practices."
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Data Engineering",
+      "title": "Data Engineering with SQL and Python",
+      "description": "Learn how to design, build, and maintain scalable data pipelines using SQL and Python.",
+      "price": "",
+      "level": "Intermediate",
+      "duration": "28 hours",
+      "technology": [
+        "SQL",
+        "Python"
+      ],
+      "exercises": 22,
+      "videos": 33,
+      "lessons": 13,
+      "rating": 4.8,
+      "likes": 1,
+      "whatLearn": [
+        "Design and implement data pipelines.",
+        "Use SQL for data extraction and transformation.",
+        "Process data using Python for analysis and reporting.",
+        "Maintain and optimize ETL workflows."
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "Software Development",
+      "title": "Object-Oriented Programming in C++",
+      "description": "Dive into classes, inheritance, and polymorphism to master OOP principles with C++.",
+      "price": "",
+      "level": "Advanced",
+      "duration": "65 hours",
+      "technology": [
+        "C / C++",
+        "Rust"
+      ],
+      "exercises": 28,
+      "videos": 45,
+      "lessons": 18,
+      "rating": 4.9,
+      "likes": 5,
+      "whatLearn": [
+        "Understand object-oriented programming principles.",
+        "Implement classes, inheritance, and polymorphism in C++.",
+        "Work on real-world programming projects.",
+        "Learn best practices for software development and design patterns."
+      ]
+    },
+    {
+      "id": 7,
+      "topic": "Web Development",
+      "title": "React for Beginners",
+      "description": "Learn React.js fundamentals and build interactive single-page applications.",
+      "price": "Paid course",
+      "level": "Beginner",
+      "duration": "20 hours",
+      "technology": [
+        "JavaScript",
+        "React"
+      ],
+      "exercises": 18,
+      "videos": 28,
+      "lessons": 10,
+      "rating": 4.7,
+      "likes": 0,
+      "whatLearn": [
+        "Understand React components, props, and state.",
+        "Create functional UI with JSX.",
+        "Build simple SPA projects.",
+        "Handle events and forms in React."
+      ]
+    },
+    {
+      "id": 8,
+      "topic": "Machine Learning",
+      "title": "Deep Learning with TensorFlow",
+      "description": "Explore neural networks and build deep learning models with TensorFlow.",
+      "price": "Paid course",
+      "level": "Advanced",
+      "duration": "60 hours",
+      "technology": [
+        "Python",
+        "TensorFlow"
+      ],
+      "exercises": 35,
+      "videos": 50,
+      "lessons": 20,
+      "rating": 4.9,
+      "likes": 0,
+      "whatLearn": [
+        "Build and train neural networks.",
+        "Understand CNNs and RNNs.",
+        "Apply deep learning to image and text data.",
+        "Use TensorFlow APIs efficiently."
+      ]
+    },
+    {
+      "id": 9,
+      "topic": "Data Science",
+      "title": "Data Analysis with Python",
+      "description": "Perform data analysis using pandas, NumPy, and Matplotlib.",
+      "price": "Free course",
+      "level": "Beginner",
+      "duration": "12 hours",
+      "technology": [
+        "Python",
+        "SQL"
+      ],
+      "exercises": 12,
+      "videos": 20,
+      "lessons": 8,
+      "rating": 4.6,
+      "likes": 0,
+      "whatLearn": [
+        "Clean and process datasets.",
+        "Visualize data with charts.",
+        "Perform statistical analysis.",
+        "Write reproducible analysis scripts."
+      ]
+    },
+    {
+      "id": 10,
+      "topic": "Web Development",
+      "title": "Node.js and Express",
+      "description": "Build server-side applications with Node.js and Express framework.",
+      "price": "Paid course",
+      "level": "Intermediate",
+      "duration": "30 hours",
+      "technology": [
+        "JavaScript",
+        "Node.js",
+        "Express"
+      ],
+      "exercises": 25,
+      "videos": 40,
+      "lessons": 14,
+      "rating": 4.8,
+      "likes": 0,
+      "whatLearn": [
+        "Create RESTful APIs.",
+        "Handle routing and middleware.",
+        "Connect to databases.",
+        "Deploy Node.js apps."
+      ]
+    },
+    {
+      "id": 11,
+      "topic": "Cloud & DevOps",
+      "title": "Docker Essentials",
+      "description": "Learn containerization with Docker and manage applications efficiently.",
+      "price": "Paid course",
+      "level": "Beginner",
+      "duration": "10 hours",
+      "technology": [
+        "Docker",
+        "Bash"
+      ],
+      "exercises": 10,
+      "videos": 15,
+      "lessons": 6,
+      "rating": 4.5,
+      "likes": 0,
+      "whatLearn": [
+        "Understand Docker concepts.",
+        "Create and manage containers.",
+        "Use Docker Compose for multi-container apps.",
+        "Integrate Docker into development workflow."
+      ]
+    },
+    {
+      "id": 12,
+      "topic": "Artificial Intelligence",
+      "title": "Natural Language Processing",
+      "description": "Analyze and process text data with NLP techniques in Python.",
+      "price": "Paid course",
+      "level": "Intermediate",
+      "duration": "25 hours",
+      "technology": [
+        "Python",
+        "NLP"
+      ],
+      "exercises": 18,
+      "videos": 22,
+      "lessons": 12,
+      "rating": 4.7,
+      "likes": 0,
+      "whatLearn": [
+        "Text preprocessing techniques.",
+        "Build NLP pipelines.",
+        "Apply sentiment analysis and text classification.",
+        "Work with NLP libraries like NLTK and spaCy."
+      ]
+    },
+    {
+      "id": 13,
+      "topic": "Software Development",
+      "title": "Agile Software Development",
+      "description": "Learn Agile methodologies and Scrum framework for effective team management.",
+      "price": "Free course",
+      "level": "Intermediate",
+      "duration": "16 hours",
+      "technology": [
+        "Project Management",
+        "Agile"
+      ],
+      "exercises": 12,
+      "videos": 18,
+      "lessons": 9,
+      "rating": 4.6,
+      "likes": 0,
+      "whatLearn": [
+        "Understand Agile principles.",
+        "Manage sprints and backlogs.",
+        "Implement Scrum ceremonies.",
+        "Improve team collaboration and productivity."
+      ]
+    },
+    {
+      "id": 14,
+      "topic": "Data Engineering",
+      "title": "Big Data with Hadoop",
+      "description": "Learn to store and process large datasets with Hadoop ecosystem.",
+      "price": "Paid course",
+      "level": "Advanced",
+      "duration": "55 hours",
+      "technology": [
+        "Java",
+        "Hadoop"
+      ],
+      "exercises": 28,
+      "videos": 40,
+      "lessons": 18,
+      "rating": 4.8,
+      "likes": 0,
+      "whatLearn": [
+        "Understand Hadoop architecture.",
+        "Work with HDFS and MapReduce.",
+        "Process data using Pig and Hive.",
+        "Deploy Hadoop clusters."
+      ]
+    },
+    {
+      "id": 15,
+      "topic": "Web Development",
+      "title": "Advanced CSS and Animations",
+      "description": "Master CSS layouts, transitions, and animations for modern web design.",
+      "price": "Free course",
+      "level": "Advanced",
+      "duration": "22 hours",
+      "technology": [
+        "CSS",
+        "HTML"
+      ],
+      "exercises": 15,
+      "videos": 25,
+      "lessons": 10,
+      "rating": 4.7,
+      "likes": 0,
+      "whatLearn": [
+        "Create responsive layouts.",
+        "Use Flexbox and Grid effectively.",
+        "Implement CSS transitions and keyframe animations.",
+        "Optimize styling for cross-browser compatibility."
+      ]
+    }
+  ],
+  "enrollments": [
+    {
+      "id": 1765478804702,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765479168401,
+      "courseId": 8,
+      "plan": "trial"
+    },
+    {
+      "id": 1765479277414,
+      "courseId": 8,
+      "plan": "trial"
+    },
+    {
+      "id": 1765479437753,
+      "courseId": 7,
+      "plan": "trial"
+    },
+    {
+      "id": 1765479518970,
+      "courseId": 7,
+      "plan": "trial"
+    },
+    {
+      "id": 1765479523690,
+      "courseId": 7,
+      "plan": "full"
+    },
+    {
+      "id": 1765479874543,
+      "courseId": 6,
+      "plan": "full"
+    },
+    {
+      "id": 1765483168370,
+      "courseId": 6,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484101842,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484145409,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484362931,
+      "courseId": 9,
+      "plan": "full"
+    },
+    {
+      "id": 1765484377016,
+      "courseId": 9,
+      "plan": "full"
+    },
+    {
+      "id": 1765484423215,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484425726,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484677742,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765484860369,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485002451,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485079742,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485239808,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485284469,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485328207,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485346879,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485473476,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485691777,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485876339,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765485879867,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765486257789,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765486419474,
+      "courseId": 9,
+      "plan": "trial"
+    },
+    {
+      "id": 1765486661504,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765486745868,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765486751136,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765486802048,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487034509,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487126401,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487131011,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487171847,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487272581,
+      "courseId": 8,
+      "plan": "full"
+    },
+    {
+      "id": 1765487348920,
+      "courseId": 3,
+      "plan": "trial"
+    },
+    {
+      "id": 1765487362593,
+      "courseId": 3,
+      "plan": "full"
+    }
+  ]
+}

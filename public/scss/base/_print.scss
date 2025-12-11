@@ -1,0 +1,19 @@
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+  
+    nav, footer, .btn, .desktop-only {
+        display: none !important;
+    }
+  
+    img {
+        display: none
+    }
+  
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+}

@@ -1,22 +1,18 @@
-// Абстракти (змінні, міксини, функції)
 @use "abstracts/vars" as *;
 @use "abstracts/mixins" as *;
 @use "abstracts/functions" as *;
+@use "abstracts/utilities" as *;
 
-// Базові стилі
 @use "base/global";
-@use "base/typography";
 @use "base/animations";
+@use "base/print";
 
-// Лейаут
 @use "layout/header";
 @use "layout/footer";
 
-// Компоненти
 @use "components/buttons";
 @use "components/cards";
 
-// Сторінки
 @use "pages/home";
 @use "pages/courses";
 @use "pages/course-details";

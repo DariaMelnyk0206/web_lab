@@ -2,126 +2,143 @@
 @use "../abstracts/mixins" as mixins;
 
 .enroll-container {
-  max-width: 100vw;
-  margin: 35px auto 80px;
-  padding: 0 50px;
-  display: flex;
-  gap: 40px;
-
-  > .col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    &:first-child {
-      background: none;
-      border: none;
-      justify-content: center;
-    }
-  }
-
-  .course-info {
-    padding: 0;
     max-width: 100vw;
-    position: relative;
+    margin: 35px auto 80px;
+    padding: 0 50px;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
-    justify-content: space-between;
-
-    h1 {
+    gap: 40px;
+  
+    &.free-course {
+      flex-direction: column;
+  
+      > .col:first-child {
+        width: 100%;
+      }
+    }
+  
+    > .col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+  
+      &:first-child {
+        background: none;
+        border: none;
+        justify-content: flex-start;
+      }
+    }
+  
+    .course-info {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: flex-start;
+      padding: 0;
+      max-width: 100%;
+  
+      h1 {
         @include mixins.workSansFont(36px, 700, vars.$black, normal);
+        margin: 0 0 5px;
         line-height: 1;
-        margin: 0px 0px 5px;
-        padding: 0;
-    }
-
-    p {
+      }
+  
+      p {
         @include mixins.nunitoFont(22px, 300, vars.$black, normal);
-        line-height: 1;
-        margin: 0px 0px 50px;
-        padding: 0;
-    }
-
-    .time-lessons-row {
+        margin: 0 0 16px;
+        line-height: 1.2;
+      }
+  
+      .time-lessons-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-    }
-
-    .time {
+      }
+  
+      .time, .lessons {
         display: flex;
         align-items: center;
         gap: 6px;
         @include mixins.nunitoFont(18px, 700, vars.$black, normal);
+      }
     }
-
-    .lessons {
-        display: flex;
-        align-items: center;
-        @include mixins.nunitoFont(18px, 500, vars.$black, normal);
-    }
-    }
-}
-
-h3{
-    @include mixins.workSansFont(30px, 700, vars.$black, normal);
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-}
-.enroll-form {
-    position: relative;
-    padding: 40px 0 0 24px ;
+  }
+  
+  .enroll-form {
+    padding: 24px;
     background: vars.$white;
     border: 1px solid vars.$gray;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    
-    &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 10%;
-        width: 80%;
-        height: 1px;
-        background-color: vars.$gray;
-        transform: translateY(-50%);
-    }
-
-    input[type="radio"] {
-        width: 18px;
-        height: 18px;
-        margin-right: 20px;
-        accent-color: vars.$blue;
-        cursor: pointer;
-    
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 0;
-    }
-    
+    width: 100%;
+    position: relative;
+  
     label {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        @include mixins.nunitoFont(16px, 500, vars.$black, normal);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      @include mixins.nunitoFont(16px, 500, vars.$black, normal);
     }
-    
-    label span {
-        font-size: 14px;
-        color: vars.$black;
-        line-height: 1.2;
+  
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      width: 80%;
+      height: 1px;
+      background-color: vars.$gray;
+      transform: translateY(-50%);
     }
-}
-
-@media (max-width: 768px) {
-    .enroll-container {
-        flex-direction: column;
+  }
+  
+  #enroll-message-container {
+    margin-top: 16px;
+    min-height: 40px;
+    @include mixins.nunitoFont(16px, 600, vars.$black, normal);
+  
+    .btn {
+      display: block;
+      margin-top: 10px; // кнопка “Скинути” під текстом
+      padding: 10px 16px;
+      background-color: vars.$blue;
+      color: vars.$white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      @include mixins.nunitoFont(14px, 500, vars.$white, normal);
+  
+      &:hover {
+        opacity: 0.9;
       }
-}
+    }
+  }
+  
+  .enroll-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px; // відстань від форми до кнопки Enroll
+  }
+  
+  h3 {
+    @include mixins.workSansFont(30px, 700, vars.$black, normal);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .enroll-container {
+      flex-direction: column;
+      padding: 0 24px;
+    }
+  
+    .enroll-btn-wrapper {
+      margin-top: 12px;
+    }
+  }
+  

@@ -25,7 +25,6 @@
                         <li><label><input type="checkbox" name="level"> Advanced</label></li>
                     </ul>
                 </div>
-            
                 <div class="filter-group">
                     <legend>Average time to complete</legend>
                     <ul>
@@ -36,7 +35,6 @@
                         <li><label><input type="checkbox" name="time"> More than 60 hours</label></li>
                     </ul>
                 </div>
-            
                 <div class="filter-group">
                     <legend>Price</legend>
                     <ul>
@@ -44,7 +42,6 @@
                         <li><label><input type="checkbox" name="price"> Paid</label></li>
                     </ul>
                 </div>
-            
                 <div class="filter-group">
                     <legend>Topic</legend>
                     <ul>
@@ -57,7 +54,6 @@
                         <li><label><input type="checkbox" name="topic"> Cloud & DevOps</label></li>
                     </ul>
                 </div>
-
                 <div class="filter-group">
                     <legend>Technology</legend>
                     <ul>
@@ -84,18 +80,13 @@
             </form>
         </div>
 
-        <div class="courses-col">
-            <% if (courses && courses.length > 0) { %>
-              <% courses.forEach(course => { %>
-                <%- include('partials/courseCard', { course: course }) %>
-              <% }) %>
-            <% } else { %>
-              <p>No courses available</p>
-            <% } %>
-          </div>
+        <div class="courses-col" id="courses-col"></div>
     </main>
 
-    <%- include('partials/footer') %>
+    <%- include('partials/footer') %>    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+    <script type="module" src="js/main.js"></script>
+        
 </body>
 </html>

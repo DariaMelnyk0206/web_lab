@@ -1,24 +1,52 @@
 <header class="header-container">
-  <div class="col">
-      <div class="learnit">
-          <a href="/">LearnIT</a>
-      </div>
-      <nav class="desktop">
-          <a href="/courses">Explore ▼</a>
-      </nav>
-  </div>
+    <div class="col">
+        <div class="learnit">
+            <a href="/">LearnIT</a>
+        </div>
+        <nav class="desktop">
+            <a href="/courses">Explore ▼</a>
+        </nav>
+    </div>
+  
+    <div class="col">
+        <input type="text" id="search-input" placeholder="Search courses...">
+        <button type="submit" id="search-button" aria-label="submit">
+            <img src="/search.png" alt="Search courses">
+        </button>        
 
-  <div class="col">
-      <button aria-label="submit">
-          <img src="/search.png" alt="Search courses">
-      </button>
-      <nav class="desktop">
-          <button class="btn outlined white login-btn">Log In</button>
-          <button class="btn solid white signup-btn">Sign Up</button>
-      </nav>
-      <button class="mobile" aria-label="more">
-          <img src="/more.png" alt="More options">
-      </button>
-  </div>
+        <nav class="desktop">
+            <button class="btn outlined white login-btn">Log In</button>
+            <button class="btn solid white signup-btn">Sign Up</button>
+        </nav>
+
+        <button class="mobile" aria-label="more">
+            <img src="/more.png" alt="More options">
+        </button>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const searchInput = document.querySelector("#search-input");
+            const searchButton = document.querySelector("#search-button");
+        
+            if (!searchInput || !searchButton) return;
+        
+            function performGlobalSearch() {
+                const query = searchInput.value.trim();
+                if (query.length === 0) return;
+        
+                // Переходимо на сторінку курсів, але з параметром пошуку
+                window.location.href = `/courses?submit=${encodeURIComponent(query)}`;
+            }
+        
+            searchButton.addEventListener("click", performGlobalSearch);
+        
+            searchInput.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    performGlobalSearch();
+                }
+            });
+        });
+    </script>          
 </header>
+
   

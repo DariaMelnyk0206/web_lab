@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Enroll — <%= course.title %></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/main.css">
+  <title>Enroll — <%= course.title %></title>
 </head>
 <body>
-    <%- include('partials/header') %>
+  <%- include('partials/header') %>
 
-    <main class="enroll-container">
-        <div class="col">
-            <section class="course-info">
-                <h1><%= course.title %></h1>
-                <p><%= course.description %></p>
-                <div class="col time-lessons-row">
-                    <div class="time">
-                        <img src="/time.png" alt="Duration">
-                        <span><%= course.duration %></span>
-                    </div>
-                    
-                    <div class="lessons">
-                        <span>&lt;&gt; <%= course.lessons %> lessons</span>
-                    </div>
-                </div>                
-            </section>
+  <main class="enroll-container <%= course.price === 'Free' ? 'free-course' : '' %>">
+    <div class="col">
+      <section class="course-info">
+        <h1><%= course.title %></h1>
+        <p><%= course.description %></p>
+  
+        <div class="time-lessons-row">
+          <div class="time">
+            <img src="/time.png" alt="Duration">
+            <span><%= course.duration %></span>
+          </div>
+          <div class="lessons">
+            <span>&lt;&gt; <%= course.lessons %> lessons</span>
+          </div>
         </div>
+  
+        <div id="enroll-message-container"></div>
+      </section>
+    </div>
+  
+    <% if (course.price !== 'Free') { %>
+    <div class="col">
+      <section class="enroll-form">
+        <form id="enroll-form" data-course-id="<%= course.id %>">
+          <label>
+            <input type="radio" name="plan" value="trial" required>
+            7-Day Free Trial
+          </label>
+          <label>
+            <input type="radio" name="plan" value="full">
+            Full Course Access — $15
+          </label>
+        </form>
+      </section>
+  
+      <div class="enroll-btn-wrapper">
+        <button type="submit" class="btn solid-purple" form="enroll-form">Enroll & Start</button>
+      </div>
+    </div>
+    <% } %>
+  </main>  
 
-        <div class="col">
-            <% if (course.price !== "Free course") { %>
-                <h3>Choose Your Plan</h3>
-                <section class="enroll-form">
-                    <form action="#">
-                        <label>
-                            <input type="radio" name="plan" value="trial" required>
-                            7-Day Free Trial
-                        </label>
-                        <br>
-                
-                        <label>
-                            <input type="radio" name="plan" value="full">
-                            Full Course Access — $15
-                        </label>
-                        <br><br>
-                    </form>
-                </section>
-                <button class="btn solid-purple">Enroll & Start</button>
-            <% } %>
-        </div>        
-    </main>
+  <%- include('partials/footer') %>
 
-    <%- include('partials/footer') %>
+  <script type="module">
+    import EnrollForm from '/js/EnrollForm.js';
+
+    const courseId = Number('<%= course.id %>');
+    const isFree = '<%= course.price %>' === 'Free';
+
+    if (isFree) {
+      // Безкоштовний курс — права колонка не потрібна, кнопка під лівою колонкою
+      new EnrollForm(null, courseId, true);
+    } else {
+      new EnrollForm('form[data-course-id]', courseId);
+    }
+  </script>  
+
 </body>
 </html>

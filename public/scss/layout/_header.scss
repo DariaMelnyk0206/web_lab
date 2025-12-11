@@ -2,42 +2,72 @@
 @use "../abstracts/mixins" as mixins;
 
 .header-container {
-    max-width: 100vw;
+    width: 100%;
     padding: 0 50px;
     height: 80px;
     background-color: vars.$blue;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+  
     .col {
-        display: flex;
-        align-items: center;
-        gap: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
-
+  
     .learnit a {
-        @include mixins.firaCodeFont(36px, 700, vars.$white, normal); 
-        text-decoration: none;
+      @include mixins.firaCodeFont(36px, 700, vars.$white, normal); 
+      text-decoration: none;
     }
-
+  
     nav.desktop a {
-        @include mixins.workSansFont(20px, 500, vars.$white, normal); 
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-
-        @include mixins.hover-translate();
+      @include mixins.workSansFont(20px, 500, vars.$white, normal); 
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      @include mixins.hover-translate();
     }
-
+  
     .desktop {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    @media (max-width: 768px) {
-        nav.desktop { display: none; }
+    #search-input {
+      width: 250px;
+      height: 40px;
+      border: none;
+      border-radius: 100px;
+      padding: 0 10px;
+      font-size: 16px;
+      outline: none;
     }
-}
+  
+    #search-button {
+      height: 40px;
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 768px) {
+      padding: 0 10px;
+  
+      nav.desktop {
+        display: none;
+      }
+  
+      #search-input {
+        width: 150px;
+        height: 35px;
+        font-size: 14px;
+      }
+  
+      #search-button {
+        height: 35px;
+      }
+    }
+}  

@@ -37,17 +37,17 @@
         </section>          
             
         <section class="enroll-redirect">
-            <button
-                onclick="window.location.href='/enroll/<%= course.id %>'"
-                class="btn start">
+            <button class="btn start" 
+                    onclick="window.location.href='/enroll/<%= course.id %>'">
                 Start
             </button>
-        </section> 
+        </section>                                        
 
         <section class="what-learn">
             <%- include('partials/what_learn', { whatLearn: course.whatLearn }) %>
         </section> 
 
+        <!-- course-details.ejs -->
         <section class="course-stats">
             <div class="col">
                 <img src="/time.png" alt="Duration">
@@ -55,8 +55,10 @@
             </div>
             
             <div class="col">
-                <span><%= course.rating %>⭐</span>
+                <span id="likes-<%= course.id %>"><%= course.likes || 0 %></span>
+                <button class="like-btn" data-id="<%= course.id %>">❤</button>
             </div>
+            
             
             <div class="col">
                 <img src="/level.png" alt="Level">
@@ -66,9 +68,13 @@
             <div class="col">
                 <span>&lt;&gt; <%= course.lessons %> lessons</span>
             </div>
-        </section>             
+        </section>
+        
     </main>
 
-    <%- include('partials/footer') %>
+    <%- include('partials/footer') %>       
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="/js/LikeService.js"></script>
+    <script type="module" src="/js/main.js"></script>
 </body>
 </html>
